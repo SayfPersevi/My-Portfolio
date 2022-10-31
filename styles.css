@@ -130,6 +130,21 @@ background-color: #242424;
   width: 100%;
 }
 
+nav,
+.scroll,
+.header {
+  opacity: 1;
+  visibility: visible;
+  transition: all 600ms 800ms;
+}
+.modal__open nav,
+.modal__open .scroll,
+.modal__open .header {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 400ms;
+}
+
 /* 
 
   LANDING PAGE
@@ -277,10 +292,18 @@ nav {
   width: 90%;
   max-width: 1100px;
   height: 700px;
-  box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
   border-radius: 20px;
   overflow: hidden;
   display: flex;
+  visibility: hidden;
+  z-index: -1;
+  transition: visibility 1s, z-index 1s, box-shadow 0.5s ease;
+}
+
+.modal__open .modal{
+  z-index: 60;
+  box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
+  visibility: visible;
 }
 
 .modal__half {
@@ -290,10 +313,18 @@ nav {
   flex-direction: column;
   justify-content: center;
   position: relative;
+  transition: all 300ms ease;
+}
+
+.modal__open .modal__about,
+.modal__open .modal__contact {
+  transform: translateX(0%);
 }
 
 .modal__about {
   background-color: rgb(245, 245, 245);
+  transform: translateX(-110%);
+
 }
 
 .modal__title {
@@ -349,6 +380,7 @@ nav {
 .modal__contact {
   background-color: #242424;
   color: #fff;
+  transform: translateX(110%);
 }
 
 .form__item {
@@ -383,7 +415,7 @@ nav {
   left: 0;
   width: 100%;
   height: 100%;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
 }
@@ -406,6 +438,7 @@ nav {
 
 .modal__overlay--visible {
   z-index: 1  ;
+  display: flex;
 }
 
 .fa-spinner {
