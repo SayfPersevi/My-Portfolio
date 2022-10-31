@@ -36,7 +36,7 @@ input,
 textarea {
 width: 100%;
 background-color: #242424;
-color: white;
+color: #fff;
 outline: none;
 border: 3px solid #c0c4cc;
 border-top: none;
@@ -80,6 +80,7 @@ textarea:focus {
 }
 
 .click {
+  cursor: pointer;
   transition: all 300ms ease;
 }
 
@@ -98,7 +99,7 @@ textarea:focus {
   line-height: 1;
 }
 
-*.orange--text {
+.orange--text {
   color: #f06449;
 }
 
@@ -121,7 +122,7 @@ background-color: #242424;
 }
 
 .link__hover-effect--white:after {
-  background-color: white;
+  background-color: #fff;
 }
 
 .link__hover-effect:hover:after {
@@ -162,7 +163,7 @@ background-color: #242424;
 
 .social__link {
   background-color: #f06449;
-  color: white;
+  color: #fff;
   padding: 6px;
   width: 32px;
   height: 32px;
@@ -181,7 +182,7 @@ background-color: #242424;
   border-radius: 50%;
   border: none;
   background-color: #242424;
-  color: white;
+  color: #fff;
   position: absolute;
   right: 40px;
   bottom: 32px;
@@ -288,6 +289,7 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 }
 
 .modal__about {
@@ -346,7 +348,7 @@ nav {
 
 .modal__contact {
   background-color: #242424;
-  color: white;
+  color: #fff;
 }
 
 .form__item {
@@ -356,7 +358,7 @@ nav {
 .form__submit {
   background-color: #f06449;
   border: 2px solid #f06449;
-  color: white;
+  color: #fff;
   font-weight: bold;
   width: 100%;
   max-width: 240px;
@@ -366,7 +368,7 @@ nav {
 }
 
 .form__submit:hover {
-  border-color: white;
+  border-color: #fff;
   background-color: transparent;
 }
 
@@ -375,11 +377,64 @@ nav {
   color: #f06449;
 }
 
+.modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__overlay--loading {
+  background-color: #242424;
+  font-size: 80px;
+  z-index: -1;
+}
+
+
+.modal__overlay--succes {
+  background-color: #4bb543;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  padding: 28px;
+}
+
+.fa-spinner {
+  animation: spinner 750ms infinite linear;
+}
+
+@keyframes spinner {
+  0% { 
+    transform: rotate(0);
+
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.modal__exit {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: #fff;
+  font-size: 36px;
+  z-index: 100  ;
+}
+
 /* 
 
   PROJECTS
 
 */
+
+.project {
+  margin-bottom: 80px;
+}
 
 .section__title {
   text-align: center;
@@ -420,7 +475,7 @@ nav {
   transform: translateY(100%);
   transition: opacity 300ms, transform 450ms ease;
   opacity: 0;
-  color: white;
+  color: #fff;
   max-width: 550px;
 }
 
@@ -448,7 +503,7 @@ nav {
 }
 
 .project__description--link {
-  color: white;
+  color: #fff;
   font-size: 20px;
   margin-right: 16px;
 }
@@ -486,5 +541,5 @@ footer {
 
 .footer__social--link,
 .footer__copyright {
-  color: white;
+  color: #fff;
 }
