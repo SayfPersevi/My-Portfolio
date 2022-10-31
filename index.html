@@ -10,6 +10,15 @@
       src="https://kit.fontawesome.com/1b7af255e8.js"
       crossorigin="anonymous"
     ></script>
+    <script src="index.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("ZAXb9Squ0SSUA1gbp");
+   })();
+</script>
   </head>
 
   <body>
@@ -119,18 +128,18 @@
         <div class="modal__half modal__contact">
           <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
           <h4 class="modal__sub-title modal__sub-title--contact">I'm currently open to new opportunities.</h4>
-          <form id="contact__form" action="">
+          <form id="contact__form" onsubmit="contact(event)">
             <div class="form__item">
               <label class="form__item--label">Name</label>
-              <input class="input" name="user_name" type="text" required></input>
+              <input class="input" name="user_name" type="text"></input>
             </div>
             <div class="form__item">
               <label class="form__item--label">E-mail</label>
-              <input class="input" name="user_email" type="email" required></input>
+              <input class="input" name="user_email" type="email"></input>
             </div>
             <div class="form__item">
               <label class="form__item--label">Message </label>
-              <textarea class="input" name="message" type="text" required></textarea>
+              <textarea class="input" name="message" type="text"></textarea>
             </div>
             <button id="contact__submit" class="form__submit">
               Send it My Way
@@ -249,6 +258,7 @@
                     <div class="project__description--links">
                       <a
                         href="https://github.com/SayfPersevi"
+
                         class="project__description--link"
                       >
                         <i class="fab fa-github"></i>
