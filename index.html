@@ -49,7 +49,7 @@
               >Contact</a
             >
           </li>
-          <li class="nav__link click">
+          <li class="nav__link click" onclick="toggleContrast()">
             <a
               href=""
               class="nav__link--anchor link__hover-effect link--hover-effect--black"
@@ -64,7 +64,7 @@
           <h1 class="title">Hey</h1>
           <h1 class="title orange--text">I'm Sayf.</h1>
           <p class="header__para">
-            I'm a <b class="orange--text">Frontend Software Enigineer</b> with a
+            I'm a <b class="orange--text" onclick="toggleContrast()">Frontend Software Enigineer</b> with a
             strong passion for building web applications with great user
             experiences.
             <br />
@@ -126,7 +126,7 @@
           </div>
         </div>
         <div class="modal__half modal__contact">
-          <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+          <i class="fas fa-times modal--exit click" onclick="toggleModal()"></i>
           <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
           <h4 class="modal__sub-title modal__sub-title--contact">I'm currently open to new opportunities.</h4>
           <form id="contact__form" onsubmit="contact(event)">
