@@ -199,9 +199,11 @@ nav,
   border: none;
   background-color: #242424;
   color: #fff;
-  position: absolute;
+  position: fixed;
   right: 40px;
   bottom: 32px;
+  z-index: 100;
+  box-shadow: 0px 12px 30px 0 rgb(0, 0, 0, 0.28);
 }
 
 .scroll {
@@ -585,6 +587,7 @@ nav {
 */
 
 footer {
+  position: relative;
   background-color: #242424;
   display: flex;
   padding: 3% 0;
@@ -659,4 +662,57 @@ top: 80vh;
 .shape--8 {
 left: 80vw;
 top: 80vh;  
+}
+
+
+/* Small phones, tablets, large smart phones */
+@media (max-width: 768px) {
+  .title {
+    font-size: 80px;
+  }
+
+  .header__para {
+    font-size: 20px;
+  }
+
+  .modal {
+    top: 0;
+    left: 0;
+    transform: none;
+    height: auto;
+    width: 100%;
+    flex-direction: column-reverse;
+  }
+
+  .modal__half {
+    width: 100%;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .title {
+    font-size: 52px;
+  }
+.header__para {
+  font-size: 18px;
+}
+.nav__link:first-child {
+  display: none;
+}
+.project__description--para {
+  display: none;
+}
+.project__description {
+  left: 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+.project__description--sub-title {
+  margin-bottom: 8px;
+}
+.modal__half {
+  padding: 40px;
+}
 }
