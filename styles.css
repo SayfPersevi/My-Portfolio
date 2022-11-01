@@ -613,3 +613,50 @@ footer {
 .footer__copyright {
   color: #fff;
 }
+
+/* 
+
+  SHAPES
+
+*/
+
+.shape {
+  position: fixed;
+}
+
+.shape--0 {
+left: 5vw;
+top: 15vh;  
+}
+.shape--1 {
+left: 50vw;
+top: 15vh;  
+}
+.shape--2 {
+left: 80vw;
+top: 15vh;  
+}
+.shape--3 {
+left: 5vw;
+top: 50vh;  
+}
+.shape--4 {
+left: 50vw;
+top: 50vh;  
+}
+.shape--5 {
+left: 80vw;
+top: 50vh;  
+}
+.shape--6 {
+left: 5vw;
+top: 80vh;  
+}
+.shape--7 {
+left: 50vw;
+top: 80vh;  
+}
+.shape--8 {
+left: 80vw;
+top: 80vh;  
+}
